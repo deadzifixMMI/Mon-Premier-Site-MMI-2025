@@ -1,0 +1,70 @@
+
+/* BOUTON */
+.feature-content-2 .btn {
+  align-self: flex-start;
+  font-family: 'Squatina', serif;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.8rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+}
+
+.feature-content-3 .btn {
+  align-self: flex-start;
+  font-family: 'Squatina', serif;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.8rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+}
+
+.feature-content-4 .btn {
+  align-self: flex-start;
+  font-family: 'Squatina', serif;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.8rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+}
+
+.dates {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.title-supp {
+  padding-bottom: 2rem;
+}
+
+.last-text {
+  padding-bottom: 2rem;
+}
+
+.mobile-billetterie {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem; /* ← ESPACEMENT ICI */
+
+  font-family: 'Squatina', serif;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--text);
+
+  padding: 0.5rem 3rem;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  width: fit-content;
+}
+
+
+.mobile-billetterie .ticket-img{
+  width: 28px;
+  height: auto;
+  display: block;
+}

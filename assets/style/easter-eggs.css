@@ -1,0 +1,169 @@
+
+/* ===== FULL RAINBOW MODE ===== */
+
+@keyframes rainbow-colors {
+  0%   { --hue: 0; }
+  100% { --hue: 360; }
+}
+
+html.konami-rainbow {
+  animation: rainbow-colors 4s linear infinite;
+}
+
+/* couleurs pilotées par la variable */
+html.konami-rainbow {
+  --bg: hsl(var(--hue), 90%, 95%);
+  --text: hsl(calc(var(--hue) + 180), 90%, 20%);
+  --border: hsl(var(--hue), 90%, 30%);
+  --btn-bg: hsl(var(--hue), 90%, 30%);
+  --btn-text: hsl(calc(var(--hue) + 180), 90%, 95%);
+}
+
+/* ===== RAINBOW BACKGROUND ===== */
+
+html.konami-rainbow {
+  background: linear-gradient(
+    270deg,
+    #ff004c,
+    #ff9900,
+    #ffee00,
+    #33ff00,
+    #00ffee,
+    #0066ff,
+    #cc00ff,
+    #ff004c
+  );
+  background-size: 1600% 1600%;
+  animation: rainbow-bg 8s ease infinite;
+}
+
+@keyframes rainbow-bg {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html.konami-rainbow h1,
+html.konami-rainbow h2,
+html.konami-rainbow h3,
+html.konami-rainbow p,
+html.konami-rainbow a,
+html.konami-rainbow span {
+  background: linear-gradient(
+    90deg,
+    #ff004c,
+    #ff9900,
+    #ffee00,
+    #33ff00,
+    #00ffee,
+    #0066ff,
+    #cc00ff
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 4s linear infinite;
+}
+
+@keyframes rainbow-text {
+  0%   { background-position: 0%; }
+  100% { background-position: 400%; }
+}
+
+
+/* ===============================
+   NYAN CAT — ALIGNEMENT PAR VARIABLE
+================================ */
+
+:root {
+  --nyan-size: 180px;     /* ← TU CHANGES ICI */
+  --trail-height: 35px;
+  --trail-length: 3000px;
+}
+
+.nyan-wrapper {
+  position: fixed;
+  width: var(--nyan-size);
+  height: 120px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* -------- DÉPLACEMENT -------- */
+
+.nyan-wrapper.from-left {
+  left: calc(-1 * var(--nyan-size));
+  animation: nyan-move-right 6s linear forwards;
+}
+
+.nyan-wrapper.from-right {
+  right: calc(-1 * var(--nyan-size));
+  animation: nyan-move-left 6s linear forwards;
+}
+
+/* -------- CHAT -------- */
+
+.nyan-cat {
+  position: relative;
+  width: var(--nyan-size);
+  image-rendering: pixelated;
+  z-index: 2;
+}
+
+/* flip quand il vient de droite */
+.nyan-wrapper.from-right .nyan-cat {
+  transform: scaleX(-1);
+}
+
+/* -------- TRAÎNÉE ARC-EN-CIEL -------- */
+
+.nyan-trail {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: var(--trail-height);
+  width: var(--trail-length);
+
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+
+  background-size: 300% 100%;
+  animation: rainbow-flow 0.6s linear infinite;
+
+  filter: blur(2px);
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* traînée TOUJOURS collée au bord du chat */
+.nyan-wrapper.from-left .nyan-trail {
+  right: calc(var(--nyan-size) * 0.55);
+}
+
+.nyan-wrapper.from-right .nyan-trail {
+  left: calc(var(--nyan-size) * 0.55);
+}
+
+/* -------- ANIMATIONS -------- */
+
+@keyframes rainbow-flow {
+  from { background-position: 0% 50%; }
+  to   { background-position: 300% 50%; }
+}
+
+@keyframes nyan-move-right {
+  to { left: 110vw; }
+}
+
+@keyframes nyan-move-left {
+  to { right: 110vw; }
+}

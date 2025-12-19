@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musée de la Famm - Expositions</title>
+  <link rel="icon" href="assets/Images/logo-famm-fav-icon.png" type="image/png">
+
+  <link rel="stylesheet" href="assets/style/reset.css">
+
+  <link rel="stylesheet" href="assets/style/variables.css">
+  <link rel="stylesheet" href="assets/style/fonts.css">
+  <link rel="stylesheet" href="assets/style/base.css">
+
+  <link rel="stylesheet" href="assets/style/header.css">
+  <link rel="stylesheet" href="assets/style/buttons.css">
+  <link rel="stylesheet" href="assets/style/hero.css">
+  <link rel="stylesheet" href="assets/style/carousel.css">
+  <link rel="stylesheet" href="assets/style/articles.css">
+
+  <link rel="stylesheet" href="assets/style/easter-eggs.css">
+  <link rel="stylesheet" href="assets/style/style_footer.css">
+
+  <link rel="stylesheet" href="assets/style/responsive.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <img src="assets/Images/logo-famm-light.png" class="logo" id="site-logo" alt="">
+  </div>
+
+    <nav class="nav">
+    <a href="index.html" class="nav-link" data-i18n="nav.home">ACCUEIL</a>
+    <a href="musee.html" class="nav-link" data-i18n="nav.museum">LE MUSÉE</a>
+    <a href="expositions.html" class="nav-link" data-i18n="nav.exhibitions">EXPOSITIONS</a>
+    <a href="infos.html" class="nav-link" data-i18n="nav.info">INFOS PRATIQUES</a>
+    </nav>
+
+  <div class="header-right">
+    <button class="billetterie-btn desktop-only">
+
+      <span class="sizer">
+        <img src="assets/Images/ticket-light.png" class="ticket-img ticket-desktop" alt="">
+        Billetterie
+      </span>
+
+      <span class="state state-default">
+        <span data-i18n="ticketing.button">Billetterie</span>
+        </span>
+
+      <span class="state state-hover">
+        <img src="assets/Images/ticket-light.png" class="ticket-img ticket-desktop" alt="">
+        <span data-i18n="ticketing.button">Billetterie</span>
+      </span>
+
+    </button>
+    <span class="lang desktop-only" id="lang-toggle">FR</span>
+
+    <button class="theme-toggle desktop-only" id="theme-toggle-desktop">
+      <span class="theme-thumb">
+        <img
+          src="assets/Images/icon-moon.png"
+          alt="Theme icon"
+          class="theme-icon"
+        >
+      </span>
+    </button>
+
+    <!-- BURGER -->
+    <button class="burger" id="burger-btn" aria-label="Menu">
+      ☰
+    </button>
+      
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu">
+  <button class="close-menu" id="close-menu">✕</button>
+
+  <a href="index.html" data-i18n="nav.home">ACCUEIL</a>
+  <a href="musee.html" data-i18n="nav.museum">LE MUSÉE</a>
+  <a href="infos.html" data-i18n="nav.info">INFOS PRATIQUES</a>
+
+  <button class="theme-toggle mobile-only" id="theme-toggle-mobile">
+    <span class="theme-thumb">
+      <img src="assets/Images/icon-moon.png" alt="Theme icon" class="theme-icon">
+    </span>
+  </button>
+
+  <a href="billetterie.html" class="mobile-billetterie">
+    <img src="assets/Images/ticket-light.png" class="ticket-img ticket-mobile" alt="">
+    <span data-i18n="ticketing.button">Billetterie</span>
+  </a>
+
+  <div class="mobile-lang">
+    <span class="lang" id="lang-toggle-mobile">FR</span>
+  </div>
+</nav>
+
+
+<article class="feature-block image-right">
+
+  <img src="assets/Images/collection_1.png" alt="">
+
+  <div class="feature-content-2" >
+    <h2>REMINISCENCE </h2>
+    <p class="title-supp" data-i18n="expositiontempo.title">Exposition temporaire</p>
+    <p class="quote" data-i18n="firstexpo2.title">Première exposition institutionnelle en Europe consacrée à l’artiste Elizabeth Colomba
+Le 19 octobre 2025, FAMM a inauguré REMINISCENCE, la première exposition institutionnelle en Europe consacrée à l’artiste française Elizabeth Colomba basée à New York. Placée sous le commissariat de Simon de Pury, figure emblématique du monde de l’art, l’exposition se tiendra au Centre d’Art de Mougins récemment rénové et installé dans un bâtiment médiéval au cœur du village historique. Organisée en partenariat avec Collecta et en collaboration avec la Ville de Mougins, l’exposition sera présentée du 18 octobre 2025 au 6 avril 2026</p>
+    <p class="dates" data-i18n="dateexpo.title">13 Octobre - 6 Avril 2025 </p>
+    <button class="btn" data-i18n="buttonexpo.title"> Découvrir l’exposition </button>
+  </div>
+</article>
+<article class="gallery">  
+  <h3 class="sr-only">Galerie de l’exposition 1</h3> 
+  <div class="ima">
+    <img src="assets/Images/collection_1.1.png" alt="">
+  </div>
+  <div class="ima">
+    <img src="assets/Images/collection_1.2.png" alt="">
+  </div>
+  <div class="ima">
+    <img src="assets/Images/collection_1.3.png" alt="">
+  </div>
+</article>
+
+<hr class="divider">
+
+<!-- ARTICLE 2 EXEMPLE : -->
+
+
+<article class="feature-block image-right">
+
+  <img src="assets/Images/collection_2.png" alt="">
+
+  <div class="feature-content-2" >
+    <h2>L'HEURE FAMM</h2>
+    <p class="title-supp" data-i18n="evexpo.title"><strong>Évenèment à venir</strong></p>
+    <p class="quote" data-i18n="quoteexpo.title">L’Heure FAMM accueille Eva Laugier, chargée des publics à la Fondation Hartung-Bergman. De sa jeunesse bohème et engagée, à ses révélations esthétiques et picturales, en passant par son destin amoureux hors du commun préservé au sein d’une oliveraie antiboise, cette conférence invite à découvrir la voie romanesque de cette artiste ; guidée par une seule lumière, la sienne.</p>
+    <p class="dates" data-i18n="dateexpo.title">Mercredi 10 Décembre 2025</p>
+    <button class="btn" data-i18n="buttonexpo1.title"> Découvrir l’exposition </button>
+  </div>
+</article>
+
+<article class="gallery">   
+  <div class="ima">
+    <h3 class="sr-only">Galerie de l’exposition 2</h3>
+    <img src="assets/Images/collection_2.1.png" alt="">
+  </div>
+  <div class="ima">
+    <img src="assets/Images/collection_2.2.png" alt="">
+  </div>
+  <div class="ima">
+    <img src="assets/Images/collection_2.3.png" alt="">
+  </div>
+</article>
+
+<hr class="divider">
+
+<article class="feature-block image-right">
+
+  <img src="assets/Images/collection_3.png" alt="">
+
+  <div class="feature-content-2" >
+    <h2> COLLECTION FAMM </h2>
+    <p class="title-supp" data-i18n="expo1.title"> <strong> Exposition temporaire </strong></p>
+    <p class="quote" data-i18n="quoteexpo1.title"> FAMM (Femmes Artistes du Musée de Mougins) dévoile au public depuis le 21 juin 2024, une centaine d’œuvres réalisées par près de 90 artistes femmes originaires du monde entier. 
+Situé en plein cœur du village historique de Mougins depuis 2011, abritent désormais des peintures, sculptures et photographies d’artistes majeures ayant marqué les grands mouvements artistiques de l’impressionnisme à l’art contemporain du XXIème siècle. 
+Parmi les grands noms de l’histoire de l’art, FAMM expose des œuvres de Berthe Morisot, Mary Cassatt, Eva Gonzalès, Blanche Hoschedé-Monet, Louise Nevelson, Barbara Hepworth, Frida Kahlo.. </p>
+    <p class="dates"></p>  
+    <button class="btn" data-i18n="buttonexpo2.title"> Découvrir l’exposition </button>
+  </div>
+</article>
+<article class="gallery">   
+  <div class="ima">
+    <h3 class="sr-only">Galerie de l’exposition 3</h3>
+    <img src="assets/Images/collection_3.1.png" alt="">
+  </div>
+  <div class="ima">
+    <img src="assets/Images/collection_3.2.png" alt="">
+  </div>
+  <div class="ima">
+    <img src="assets/Images/collection_3.3.png" alt="">
+  </div>
+</article>
+
+
+
+
+
+
+<footer class="site-footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-contact">
+      <h2>CONTACTS</h2>
+
+      <form class="contact-form">
+        <label>
+          <span data-i18n="name.title">Nom et prénom*</span>
+          <input type="text" required>
+        </label>
+
+        <label>
+          Email*
+          <input type="email" required>
+        </label>
+
+        <label>
+          Message
+          <textarea placeholder="Écrivez votre message..." data-i18n="placeholder.text" ></textarea>
+        </label>
+
+        <button type="submit" class="footer-btn">
+          <span data-i18n="submit.text">SOUMETTRE</span>
+        </button>
+
+      </form>
+    </div>
+
+    <div class="footer-infos">
+
+      <div class="footer-block">
+        <h3 data-i18n="adress.title">NOTRE ADRESSE</h3>
+        <p data-i18n="maps.title">FAMM (Femmes Artistes du Musée de Mougins)<br>
+          <strong>32 Rue du Commandeur, 06250 Mougins</strong>
+          <br>Le FAMM est ouvert tous les jours<br>de 10h à 18h
+        </p>
+      </div>
+
+      <div class="footer-block">
+        <h3 data-i18n="socialmedia.title">NOS RÉSEAUX</h3>
+
+        <div class="footer-social">
+          <img 
+            src="assets/Images/instaicon-light.png"
+            class="social-icon social-instagram"
+            alt="Instagram">
+          <a href="https://www.instagram.com/famm_mougins/" class="hyper-lien">Instagram — famm_mougins</a>
+        </div>  
+
+        <div class="footer-social">
+          <img 
+            src="assets/Images/tiktokicon-light.png"
+            class="social-icon social-tiktok"
+            alt="TikTok">
+          <a href="https://www.tiktok.com/@famm_mougins" class="hyper-lien">TikTok — famm_mougins</a>
+        </div>
+
+
+
+        <div class="footer-block">
+          <h3 data-i18n="joinus.title">JOIGNEZ-NOUS</h3>
+          <p>reservations@famm.com</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

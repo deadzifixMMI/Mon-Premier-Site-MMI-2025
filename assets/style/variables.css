@@ -1,0 +1,28 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --h1-size: 9.3rem;
+  --h2-size: 7.5rem;
+  --h3-size: 5.6rem;
+  --body-size: 1.125rem;
+  --button-lg-size: 2.2rem;
+  --button-md-size: 1.8rem;
+
+  --bg: #ffffff;
+  --text: #000000;
+  --border: #000000;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --bg: #000000;
+  --text: lab(92% 0 -0.01);
+  --border: lab(92% 0 -0.01);
+  --btn-bg: lab(92% 0 -0.01);
+  --btn-text: #000000;
+}

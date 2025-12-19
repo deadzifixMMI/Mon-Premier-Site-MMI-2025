@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musée de la Famm - Accueil</title>
+  <link rel="icon" href="assets/Images/logo-famm-fav-icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/style/reset.css">
+
+  <link rel="stylesheet" href="assets/style/variables.css">
+  <link rel="stylesheet" href="assets/style/fonts.css">
+  <link rel="stylesheet" href="assets/style/base.css">
+
+  <link rel="stylesheet" href="assets/style/header.css">
+  <link rel="stylesheet" href="assets/style/buttons.css">
+  <link rel="stylesheet" href="assets/style/hero.css">
+  <link rel="stylesheet" href="assets/style/carousel.css">
+  <link rel="stylesheet" href="assets/style/articles.css">
+
+  <link rel="stylesheet" href="assets/style/easter-eggs.css">
+  <link rel="stylesheet" href="assets/style/style_footer.css">
+
+  <link rel="stylesheet" href="assets/style/responsive.css">
+
+
+</head>
+<body>
+
+<header class="header">
+
+  <div class="header-left">
+    <img
+      src="assets/Images/logo-famm-light.png"
+      class="logo"
+      id="site-logo"
+      alt="Logo du musée FAMM">
+  </div>
+
+  <!-- NAV DESKTOP -->
+  <nav class="nav">
+    <a href="index.html" class="nav-link" data-i18n="nav.home">ACCUEIL</a>
+    <a href="musee.html" class="nav-link" data-i18n="nav.museum">LE MUSÉE</a>
+    <a href="expositions.html" class="nav-link" data-i18n="nav.exhibitions">EXPOSITIONS</a>
+    <a href="infos.html" class="nav-link" data-i18n="nav.info">INFOS PRATIQUES</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="billetterie-btn desktop-only">
+
+      <span class="sizer">
+        <img
+          src="assets/Images/ticket-light.png"
+          class="ticket-img ticket-desktop"
+          alt="">
+        Billetterie
+      </span>
+
+      <span class="state state-default">
+        <span data-i18n="ticketing.button">Billetterie</span>
+      </span>
+
+      <span class="state state-hover">
+        <img src="assets/Images/ticket-light.png"
+            class="ticket-img ticket-desktop"
+            alt="">
+        <span data-i18n="ticketing.button">Billetterie</span>
+      </span>
+
+    </button>
+
+    <span class="lang desktop-only" id="lang-toggle">FR</span>
+
+    <button class="theme-toggle desktop-only" id="theme-toggle-desktop">
+      <span class="theme-thumb">
+        <img
+          src="assets/Images/icon-moon.png"
+          alt="Theme icon"
+          class="theme-icon">
+      </span>
+    </button>
+
+    <!-- BURGER -->
+    <button class="burger" id="burger-btn" aria-label="Menu">
+      ☰
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu">
+  <button class="close-menu" id="close-menu">✕</button>
+
+  <a href="musee.html" data-i18n="nav.museum">LE MUSÉE</a>
+  <a href="expositions.html" data-i18n="nav.exhibitions">EXPOSITIONS</a>
+  <a href="infos.html" data-i18n="nav.info">INFOS PRATIQUES</a>
+
+  <button class="theme-toggle mobile-only" id="theme-toggle-mobile">
+    <span class="theme-thumb">
+      <img
+        src="assets/Images/icon-moon.png"
+        alt="Theme icon"
+        class="theme-icon">
+    </span>
+  </button>
+
+  <a href="billetterie.html" class="mobile-billetterie">
+    <img 
+      src="assets/Images/ticket-light.png" 
+      class="ticket-img ticket-mobile" 
+      alt="">
+    Billetterie
+  </a>
+
+
+  <div class="mobile-lang">
+    <span class="lang" id="lang-toggle-mobile">FR</span>
+  </div>
+
+</nav>
+
+
+<section class="hero">
+  <h1 data-i18n="hero.title">
+    Premier musée privé dédié aux<br>
+    femmes artistes en Europe
+  </h1>
+
+  <div class="intro-box">
+    <p data-i18n="hero.intro">
+      Le Musée de la Famm met à l’honneur les femmes dans l’art et la culture,
+      en valorisant leur créativité, leur engagement et leur influence à travers
+      les époques. À travers ses collections et expositions, le musée donne une voix
+      aux artistes et aux figures féminines souvent oubliées, tout en invitant le
+      public à porter un regard nouveau sur leur place essentielle dans l’histoire
+      et la société.
+    </p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="carousel">
+  <h2 class="sr-only">Galerie d’œuvres</h2>
+
+  <div class="carousel-row">
+    <button class="arrow left">◀</button> 
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <img src="assets/Images/carousel-1.jpg" alt="">
+        <img src="assets/Images/carousel-2.jpg" alt="">
+        <img src="assets/Images/carousel-3.jpg" alt="">
+        <img src="assets/Images/carousel-4.jpg" alt="">
+      </div>
+    </div>
+
+    <button class="arrow right">▶</button>
+  </div>
+
+  <!-- TEXTE EN DESSOUS -->
+  <div class="carousel-caption">
+    <p id="carousel-text"></p>
+  </div>
+</section>
+
+
+<hr class="divider">
+
+<!-- ARTICLE 1 EXEMPLE : -->
+
+<article class="feature-block image-left">
+  <h2 class="sr-only">Citation fondatrice du musée</h2>
+
+  <img 
+    src="assets/Images/image_accueil.png" 
+    alt="">
+
+  <div class="feature-content">
+    <p class="quote" data-i18n="article.text">
+      “ ALORS QUE JE FINISSAIS DE <br> RELIRE UN GRAND CLASSIQUE DE <br> L’HISTOIRE DE L’ART ET QUE J’EN <br> TOURNAIS LA DERNIÈRE PAGE, JE <br> ME SUIS DEMANDÉ
+      « MAIS OU <br> SONT LES FEMMES ? »   ”
+    </p>
+
+    <p class="italic-text"> <em>Christian Levett</em></p>
+  </div>
+</article>
+<hr class="divider">
+<!-- ARTICLE 2 EXEMPLE : -->
+
+<p class="section-title" data-i18n="visit.title">PRÉPAREZ VOTRE VISITE</p>
+
+<article class="feature-block image-right">
+
+  <img 
+    src="assets/Images/article_2.png" 
+    alt="">
+
+  <div class="feature-content-2">
+
+    <h2 class="event-eyebrow" data-i18n="event.title">ÉVÈNEMENT A VENIR</h2>
+
+    <h3>ANNA-EVA BERGMAN</h3>
+
+    <p class="event-text" data-i18n="textexpo.title">L’HEURE FAMM accueille Eva Laugier, chargée des publics à la Fondation Hartung-Bergman. De sa jeunesse bohème et engagée à ses révélations esthétiques et picturales, en passant par son destin amoureux hors du commun préservé au sein d’une oliveraie antiboise, cette conférence invite à découvrir la voie romanesque de cette artiste ; guidée par une seule lumière, la sienne.
+    </p>
+
+    <button class="btn" data-i18n="button.title">Découvrir l’exposition</button>
+
+  </div>
+
+</article>
+
+
+<hr class="divider">
+
+<!-- ARTICLE 3 EXEMPLE : -->
+
+<article class="feature-block image-left">
+  <img 
+    src="assets/Images/article_3.png" 
+    alt="">
+
+  <div class="feature-content-3">
+    <h2 class="titre-souligne" data-i18n="expo.title">EXPOSITION DU MOMENT</h2>
+    <h3>REMINISCENCE</h3>
+    <p class="event-text" data-i18n="firstexpo.title">Première exposition institutionnelle en Europe consacrée à l’artiste Elizabeth Colomba. De la splendeur baroque de Vermeer et Caravage aux visions orientalistes d’Ingres et de Constant, en passant par la grâce rococo de Vigée Le Brun, l’artiste revisite les canons picturaux des maîtres anciens pour réécrire l’histoire avec un narratif inclusif et actuel. Ses toiles foisonnantes de soies, de perles et de symboles renversent ces codes hérités. Le langage du colonialisme devient celui de la dignité, de l’émancipation restituant présence et souveraineté aux femmes noires longtemps effacées du récit artistique.</p> 
+    <button class="btn" data-i18n="button1.title">Découvrir l’exposition</button>
+  </div>
+</article>
+
+<!--  ARTICLE 4 EXEMPLE -->
+
+<hr class="divider">
+
+<article class="feature-block image-right">
+
+  <img 
+    src="assets/Images/article_4.png" 
+    alt="" >
+
+
+  <div class="feature-content-4">
+    <h2 class="titre-souligne" data-i18n="exposition.title">EXPOSITION FIXE</h2>
+    <h3>COLLECTION FAMM</h3>
+    <p class="event-text" data-i18n="text1.title">Cette collection du FAMM s'inscrit dans une volonté de donner aux artistes femmes la visibilité que leur talent mérite.En attendant le programme d’expositions temporaires du FAMM, qui débutera après l’été, les visiteurs peuvent découvrir une sélection d’œuvres de la collection permanente, couvrant les principaux courants artistiques, de l’impressionnisme à l’art contemporain. Près de 100 œuvres issues de la Collection Christian Levett sont ainsi exposées, réalisées par près de 90 artistes du monde entier.</p> 
+    <button class="btn" data-i18n="button2.title">Découvrir l’exposition </button>
+  </div>
+
+  
+</article>
+
+
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="footer-contact">
+      <h2>CONTACTS</h2>
+
+      <form class="contact-form">
+        <label>
+          <span data-i18n="name.title">Nom et prénom*</span>
+          <input type="text" required>
+        </label>
+
+        <label>
+          Email*
+          <input type="email" required>
+        </label>
+
+        <label>
+          Message
+          <textarea placeholder="Écrivez votre message..." data-i18n="placeholder.text"></textarea>
+        </label>
+
+        <button type="submit" class="footer-btn">
+          <span data-i18n="submit.text">SOUMETTRE</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="footer-infos">
+
+      <div class="footer-block">
+        <h3 data-i18n="adress.title">NOTRE ADRESSE</h3>
+        <p data-i18n="maps.title">
+          FAMM (Femmes Artistes du Musée de Mougins)<br>
+          <strong>32 Rue du Commandeur, 06250 Mougins</strong><br>
+          Le FAMM est ouvert tous les jours<br>de 10h à 18h
+        </p>
+      </div>
+
+      <div class="footer-block">
+        <h3 data-i18n="socialmedia.title">NOS RÉSEAUX</h3>
+
+        <div class="footer-social">
+          <img 
+            src="assets/Images/instaicon-light.png"
+            class="social-icon social-instagram"
+            alt="Instagram">
+          <a href="https://www.instagram.com/famm_mougins/" class="hyper-lien">
+            Instagram — famm_mougins
+          </a>
+        </div>  
+
+        <div class="footer-social">
+          <img 
+            src="assets/Images/tiktokicon-light.png"
+            class="social-icon social-tiktok"
+            alt="TikTok">
+          <a href="https://www.tiktok.com/@famm_mougins" class="hyper-lien">
+            TikTok — famm_mougins
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-block">
+        <h3 data-i18n="joinus.title">JOIGNEZ-NOUS</h3>
+        <p>reservations@famm.com</p>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
+

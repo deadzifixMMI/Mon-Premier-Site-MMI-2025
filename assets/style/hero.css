@@ -1,0 +1,23 @@
+.hero {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 4rem 3rem 3rem;
+}
+
+.hero h1 {
+  margin-bottom: 3rem;
+}
+
+.intro-box {
+  max-width: 68rem;
+  border-left: 2px solid var(--text);
+  padding: 1.5rem;
+}
+
+.intro-box p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+}
