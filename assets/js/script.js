@@ -91,7 +91,7 @@ const translations = {
     'maps.title': 'FAMM (Femmes Artistes du Musée de Mougins)<br> 32 Rue du Commandeur, 06250 Mougins <br>Le FAMM est ouvert tous les jours de 10h à 18h',
     'expositiontempo.title':'Exposition temporaire',
     'firstexpo2.title':'Première exposition institutionnelle en Europe consacrée à l’artiste Elizabeth Colomba Le 19 octobre 2025, FAMM a inauguré REMINISCENCE, la première exposition institutionnelle en Europe consacrée à l’artiste française Elizabeth Colomba, basée à New York. Placée sous le commissariat de Simon de Pury, figure emblématique du monde de l’art, l’exposition se tiendra au Centre d’Art de Mougins, récemment rénové et installé dans un bâtiment médiéval au cœur du village historique. Organisée en partenariat avec Collecta et en collaboration avec la Ville de Mougins, l’exposition sera présentée du 18 octobre 2025 au 6 avril 2026',
-    'dateexpo.title':'13 Octobre - 6 Avril 2025 ',
+    'dateexpo1.title':'13 Octobre - 6 Avril 2025 ',
     'buttonexpo.title': 'Découvrir l’exposition',
     'evexpo.title': 'Évenèment à venir',
     'coordonnée1-title' : 'FAMM (Femmes Artistes du Musée de Mougins)',
@@ -147,7 +147,7 @@ const translations = {
   'maps.title': 'FAMM (Women Artists of the Mougins Museum) <br>32 Rue du Commandeur, 06250 Mougins <br>FAMM is open every day from 10 am to 6 pm',
   'expositiontempo.title':'Temporary Exhibition',
   'firstexpo2.title':'First institutional exhibition in Europe dedicated to the artist Elizabeth Colomba. On October 19, 2025, FAMM inaugurated REMINISCENCE, the first institutional exhibition in Europe dedicated to the French artist Elizabeth Colomba, based in New York. Curated by Simon de Pury, an emblematic figure in the art world, the exhibition is held at the recently renovated Mougins Art Center, housed in a medieval building in the heart of the historic village. Organized in partnership with Collecta and in collaboration with the City of Mougins, the exhibition will be presented from October 18, 2025 to April 6, 2026.',
-  'dateexpo.title':' 1O October 13 - April 6, 2025',
+  'dateexpo1.title':'  13 October - April 6, 2025',
   'buttonexpo.title': 'Discover exhibition',
   'evexpo.title': 'Upcoming event',
   'coordonnée1-title' : 'FAMM (Women Artists of the Mougins Museum)',
@@ -421,4 +421,44 @@ const observer = new MutationObserver(() => {
 observer.observe(document.documentElement, {
   attributes: true,
   attributeFilter: ['class']
+});
+
+
+
+
+
+
+
+
+
+// ERREUR 404 - Page : 
+
+
+const quotes = [
+  "« L’art n’est jamais perdu, il change simplement de regard. »",
+  "« Ce qui n’est pas visible n’est pas inexistant. »",
+  "« Les femmes ont toujours été là. Il faut juste savoir regarder. »",
+  "« Une page absente peut aussi raconter une histoire. »",
+  "« L’erreur fait parfois partie de la création. »"
+];
+
+const quoteEl = document.getElementById('error-quote');
+const btn = document.getElementById('random-quote-btn');
+
+btn.addEventListener('click', () => {
+  quoteEl.style.opacity = 0;
+
+  setTimeout(() => {
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    quoteEl.textContent = random;
+    quoteEl.style.opacity = 1;
+  }, 300);
+});
+
+/* PARALLAX DOUX AU MOUVEMENT */
+document.addEventListener('mousemove', (e) => {
+  const bg = document.querySelector('.error-bg');
+  const x = (e.clientX / window.innerWidth - 0.5) * 10;
+  const y = (e.clientY / window.innerHeight - 0.5) * 10;
+  bg.style.transform = `translate(${x}px, ${y}px)`;
 });
